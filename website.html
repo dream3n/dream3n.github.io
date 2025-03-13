@@ -48,5 +48,25 @@
             <p>This is a simple website template. You can modify it to add your own content.</p>
         </main>
     </div>
+    <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00D24000000IPlS',
+				'Customer_Support_Chat',
+				'https://thestudenthotel.my.site.com/ESWCustomerSupportChat1740402995196',
+				{
+					scrt2URL: 'https://thestudenthotel.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://thestudenthotel.my.site.com/ESWCustomerSupportChat1740402995196/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 </body>
 </html>
